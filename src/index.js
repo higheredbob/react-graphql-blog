@@ -1,47 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import App from "./App";
-import { injectGlobal, } from "styled-components";
+import React, {Fragment} from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from "react-redux";
+import store from "./store";
 
 // ------------------------------
 
-injectGlobal`
-	@import url('https://fonts.googleapis.com/css?family=Eczar|Work+Sans');
-
-	* {
-		box-sizing: border-box;
-	}
-
-	html {  
-		height: 100%;
-	}
-
-	body {
-		display: flex;
-		margin: 0;
-		min-height: 100%;
-		font-family: 'Work Sans', sans-serif;
-		background-color: #fff;
-	}
-
-	#root {
-		display: block;
-		align-self: stretch;
-		flex: 1;
-		min-height: 100%;
-		height: 100vh;
-	}
-
-	div {
-		display: flex;
-		flex-direction: column;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Eczar', sans-serif;
-	}
-`;
-
 // ------------------------------
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+ <Provider store={store}>
+      <App />
+ </Provider>,
+ document.getElementById('root'),
+)
