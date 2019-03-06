@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import Header from "../components/Header";
-import Sidebar from "../components/SideBar";
+import Sidebar from "../components/sidebar";
 
 
 const drawerWidth = 240;
