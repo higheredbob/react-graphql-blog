@@ -73,7 +73,9 @@ const mapDispatchToProps = dispatch => {
     dispatch
   );
 };
-
+MainLayout.defaultProps = {
+  state: open.false, 
+}
 export default connect(
   null,
   mapState
