@@ -156,7 +156,7 @@ const Sidebar = props => {
     </Drawer>
   );
 };
-SideBar.defaultProps = {
+Sidebar.defaultProps = {
 	bucketSlug: config.bucket.slug,
 	readKey: config.bucket["read_key"],
 };
