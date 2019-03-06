@@ -62,9 +62,8 @@ class App extends Component {
           <Router>
               <Switch>
                 <DashboardRoute path="/setting" component={Setting} />
-                <DashboardRoute path="/dashboard" component={Home} />                
-                <DashboardRoute path="/post/:id" component={DetailPage} />
-                <DashboardRoute path="/" component={Landing} />
+                <DashboardRoute path="/dashboard" component={Home} />     
+                <DashboardRoute path="/" component={Home} />
                 <DashboardRoute path="/post" component={Posts} />
                 <EmptyRoute component={NotFound} />
               </Switch>
