@@ -52,7 +52,7 @@ const styles = theme => ({
     }
   }
 });
-export const linklist = () => ({
+export const linklist = {
   dashboard: "/dashboard",
   setting: "/setting",
   feed: "/feed",
@@ -65,9 +65,9 @@ export const linklist = () => ({
   logout: "/logout",
   home: "/home",
   landing: "/"
-})
+}
 const Sidebar = props => {
-  const { open, classes, linklist } = props;
+  const { open, classes } = props;
   return (
     <Drawer
       variant="permanent"
@@ -163,6 +163,7 @@ Sidebar.defaultProps = {
 
 Sidebar.propTypes = {
   linklist: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(Sidebar);
